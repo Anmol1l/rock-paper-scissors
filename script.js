@@ -7,4 +7,16 @@ function getComputerChoice (){
         console.log ("paper")
     else console.log("scissors")
 }
-console.log (getComputerChoice())
+getComputerChoice()
+
+function getHumanChoice() {
+    let humanChoice = prompt("Enter rock, paper or scissors").toLowerCase()
+    if (humanChoice === "rock")
+        console.log("rock")
+    else if (humanChoice === "paper")
+        console.log("paper")
+    else if (humanChoice === "scissors")
+        console.log("scissors")
+    else console.log("Enter a valid input")
+}
+getHumanChoice()
