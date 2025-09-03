@@ -39,7 +39,7 @@ function playRound(computerChoice, humanChoice) {
         return "computer-wins"
     }
     else {
-        console.log ("something broke Enter a valid output")
+        console.log ("something broke Enter a valid output"
     }
 }
 
