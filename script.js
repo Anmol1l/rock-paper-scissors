@@ -17,7 +17,7 @@ function getHumanChoice() {
         return "paper";
     else if (humanInput === "scissors")
         return "scissors";
-    else return "Please enter a Valid output"
+    else return "Please enter a Valid input"
 }
 
 let humanScore = 0
@@ -39,7 +39,7 @@ function playRound(computerChoice, humanChoice) {
         return "computer-wins"
     }
     else {
-        console.log ("something broke Enter a valid output")
+        console.log ("something broke Enter a valid input")
     }
 }
 
