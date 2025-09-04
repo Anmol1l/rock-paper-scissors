@@ -4,9 +4,9 @@ body {
 h1 {
     display: flex;
     justify-content: center;
-    background-color: rgba(255, 0, 0, 0.774);
+    background-color: rgb(94, 31, 31);
     color: white;
-    padding: 80px;
+    padding: 50px;
     margin: 0px;
     font-size: 80px;
     font-family: fantasy;
@@ -15,9 +15,42 @@ h1 {
     display: flex;
     padding: 40px;
     justify-content: space-between;
+    border-bottom: 5px solid black ;
+    background-color: peachpuff;
+}
+.resultWindow {
+    padding: 50px;
+    font-size: 30px;
+    background-color: rgba(150, 10, 10, 0.571);
+    color: white;
+    height: 100px;
+    border-bottom: 5px solid black ;
+}
+.currentScore {
+    padding: 25px;
+    font-size: 35px;
+    background-color: rgba(150, 10, 10, 0.571);
+    color: white;
+    height: 75px;
+}
+.finalScore {
+    font-size: 50px;
+    background-color: rgba(0, 255, 255, 0.307);
+    padding: 25px;
+    padding-right: 50px;
+    padding-top: 45px;
+    height: 80px;
+    display: flex;
+}
+.refreshBtn {
+    height: 40px;
+    width: 150px;
+    font-size: 30px;
+    color: aliceblue;
+    background-color: rgba(7, 149, 168, 0.667);
+    border: 2px solid black;
 }
 
-.current-score {
-    display: flex;
-    flex-direction: column;
-}
+
+
+

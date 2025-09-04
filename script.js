@@ -18,7 +18,7 @@ rockBtn.addEventListener ('click' , function () {playRound(getComputerChoice(),"
 paperBtn.addEventListener ('click' , function () {playRound(getComputerChoice(),"paper"), trackScore(), ScoreDisplay()} )
 scissorsBtn.addEventListener ('click' , function () {playRound(getComputerChoice(),"scissors"), trackScore(), ScoreDisplay()} )
 
-let result = document.querySelector(".result-window")
+let result = document.querySelector(".resultWindow")
 result.style.whiteSpace = "pre-line";
 
 
@@ -47,20 +47,33 @@ function playRound(computerChoice, humanChoice) {
 let humanScore = 0
 let computerScore = 0
 
-let finalScore = document.querySelector(".final-score")
-let currentScore = document.querySelector(".current-score")
+let finalScore = document.querySelector(".finalScore")
+let currentScore = document.querySelector(".currentScore")
 currentScore.style.whiteSpace = "pre-line";
 
-function trackScore() {
-    if (humanScore === 5){
-        finalScore.textContent = "Human Wins"
-    }
-    else if (computerScore === 5) {
-        finalScore.textContent = "Computer Wins"
-    }
-}
+let refreshBtn = document.createElement("button")
+refreshBtn.textContent = "Restart"
+refreshBtn.classList = "refreshBtn"
+
 function ScoreDisplay() {
     currentScore.textContent = `Computer Score: ${computerScore}
     Human Score: ${humanScore}`
-
 }
+
+function trackScore() {
+    if (humanScore === 5){
+        finalScore.textContent = "Congratulations You Won"
+
+    }
+    else if (computerScore === 5) {
+        finalScore.textContent = "Better Luck Next Time"
+
+    }
+    else if (humanScore > 5 || computerScore > 5 ){
+        alert ("Game Over Refresh")
+    }
+    finalScore.appendChild(refreshBtn)
+    refreshBtn.style.marginLeft = "auto"
+} 
+
+refreshBtn.addEventListener('click', () => window.location.reload())
